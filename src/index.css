@@ -4,7 +4,8 @@ body{
     margin: 0;
     font-family: "Roboto",sans-serif;
     background-color: rgb(15, 15, 15);
-    color: white
+    color: whitesmoke
+    
 }
 
 @tailwind base;

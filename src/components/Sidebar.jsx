@@ -10,9 +10,6 @@ import { BiLike } from "react-icons/bi";
 
 
 
-
-
-
 export const Sidebar = () => {
 
     const mainLinks = [
