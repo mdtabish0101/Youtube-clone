@@ -74,8 +74,7 @@ This will start the React development server, and you can view the app by naviga
     - App.css             // Global styles
   /App.jsx                // Main App component
   /index.js               // Entry point for the app
-
-
+```
 
 ![youtube clone](./src/assets/youtube%20clone.png)
 ![youtube clone 2](./src/assets/youtube%20clone%202.png)
