@@ -10,9 +10,10 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useAppSelector } from '../hooks/userApp';
 import { changeSearchTerm, clearVideos } from '../features/counter/youtubeSlice';
+import { getSearchPageVideos } from '../store/Reducers/getSearchPageVideos';
 
 
-export const Navbar = () => {
+export const Navbar = ({togleSidebar}) => {
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -24,23 +25,20 @@ export const Navbar = () => {
         
         else{
             dispatch(clearVideos)
-            dispatch()
+            dispatch(getSearchPageVideos(false))
         }
     }
 
     return (
         <div className="flex items-center px-6 h-16 bg-black opacity-95 sticky top-0">
         <div className="flex items-center text-white gap-4 text-2xl w-full mx-auto">
-            {/* Left section: Menu and YouTube logo */}
             <div>
-                <IoMenuSharp />
+                <IoMenuSharp onClick={togleSidebar} className='cursor-pointer'/>
             </div>
             <div className="flex items-center py-3">
                 <AiFillYoutube className="text-3xl text-red-600" />
                 <span className="text-white text-xl ml-2">YouTube-Clone</span>
             </div>
-    
-            {/* Center section: Search bar */}
             <div className="flex-1 flex justify-center gap-3">
                 <form onSubmit={(e)=>{
                     e.preventDefault();
@@ -65,8 +63,6 @@ export const Navbar = () => {
                     <button><FaMicrophone /></button>
                 </div>
             </div>
-    
-            {/* Right section: Icons */}
             <div className="flex items-center gap-3">
                 <div className="flex items-center justify-center p-2 text-xl rounded-full bg-black">
                     <button><MdVideoCall /></button>
