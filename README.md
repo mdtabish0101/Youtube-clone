@@ -79,6 +79,3 @@ This will start the React development server, and you can view the app by naviga
 ![youtube clone](./src/assets/youtube%20clone.png)
 ![youtube clone 2](./src/assets/youtube%20clone%202.png)
 
-
-<img src="./images/image1.jpg" alt="Image 1" width="400" height="300" />
-<img src="./images/image2.jpg" alt="Image 2" width="400" height="300" />
